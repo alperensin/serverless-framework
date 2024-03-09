@@ -1,0 +1,30 @@
+@host = http://127.0.0.1:3000
+
+###
+GET {{host}}/products
+
+###
+GET {{host}}/products/86179a1b-ab04-47f7-956c-7bebcc59a19c
+
+###
+POST {{host}}/products 
+Content-Type: application/json
+
+{
+  "name": "Moletom",
+  "price": 199.9,
+  "tags": ["moletom"]
+}
+
+###
+PUT {{host}}/products/86179a1b-ab04-47f7-956c-7bebcc59a19c
+Content-Type: application/json
+
+{
+  "name": "[PROMO] Moletom",
+  "price": 99.9,
+  "tags": ["moletom", "promo"]
+}
+
+###
+DELETE {{host}}/products/86179a1b-ab04-47f7-956c-7bebcc59a19c
